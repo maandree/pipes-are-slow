@@ -8,6 +8,6 @@ lack of support] increases security, but other processes'
 file cannot be opened and programs must treat /dev/fd/
 paths especially.
 
-![](graph.svg)
+![performance graph](graph.svg)
 
 send(3)/recv(3) is marginally faster than write(3)/read(3).
