@@ -61,6 +61,10 @@ main(void)
 		}
 
 		pipe(rw);
+#if 0
+		if (fcntl(*rw, F_SETPIPE_SZ, 1 << 20) < 0)
+			return perror("fcntl F_SETPIPE_SZ"), 1;
+#endif
 		if (!fork()) {
 			close(rw[1]);
 			while (read(rw[0], buf, n) > 0);
@@ -79,6 +83,10 @@ main(void)
 		}
 
 		pipe(rw);
+#if 0
+		if (fcntl(*rw, F_SETPIPE_SZ, 1 << 20) < 0)
+			return perror("fcntl F_SETPIPE_SZ"), 1;
+#endif
 		if (!fork()) {
 			close(rw[1]);
 			while (read(rw[0], buf, n) > 0);
