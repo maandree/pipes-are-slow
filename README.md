@@ -1,3 +1,7 @@
+This repo has been moved to Codeberg and may be out of date on GitHub.
+Canonical repo: https://codeberg.org/maandree/pipes-are-slow
+
+
 Despite unix(7) offering much more features than pipe(7),
 it is much faster. There is however two features unix(7)
 does not have: there is no guarantee that small writes are
